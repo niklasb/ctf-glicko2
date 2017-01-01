@@ -12,7 +12,7 @@ If you want to play around with your own parameters and see the results, you can
 This is an application of the
 [Glicko-2](http://www.glicko.net/glicko/glicko2.pdf) rating system to the
 CTFTime data from 2016, using the [multiplayer implementation by
-Matt Sewall](https://github.com/ms2300/multiplayer-glicko2]. I scraped the
+Matt Sewall](https://github.com/ms2300/multiplayer-glicko2). I scraped the
 scoreboards from all 2016 CTFs and applied the ranking to it.
 
 To counter the fact that some teams play with vastly different numbers of
