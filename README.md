@@ -4,6 +4,11 @@ Author: [niklasb](https://twitter.com/_niklasb)
 
 ![Example Glicko-2 CTF Rating 2016](https://kitctf.de/public/glicko2-example.svg)
 
+If you want to play around with your own parameters and see the results, you can use
+[my web app](https://kitctf.de/glicko2/).
+
+## What is this?
+
 This is an application of the
 [Glicko-2](http://www.glicko.net/glicko/glicko2.pdf) rating system to the
 CTFTime data from 2016, using the [multiplayer implementation by
@@ -33,9 +38,6 @@ starting point for experimentation:
 * `negative_damping = 0.7` (negative deltas are only counted 70%)
 * `(initrat, initrd, initvol) = (1500, 100, 0.1)` (these are the standard
   Glicko-2 parameters)
-
-If you want to play around with your own parameters and see the results, you can use
-[my web app](https://kitctf.de/glicko2/).
 
 
 ## TODO + Known Limitations
