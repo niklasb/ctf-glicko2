@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CTFtime.org / All about CTF (Capture The Flag)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Capture The Flag, CTF teams, CTF ratings, CTF archive, CTF writeups">
+    
+    <meta name="author" content="ctftime team">
+
+    <!-- Le styles -->
+    <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/static/css/ctftime.css" rel="stylesheet"/>
+    <link href="/static/css/typeahead.bootstrap.css" rel="stylesheet"/>
+<!--   <link rel="stylesheet" type="text/css" href="/static/css/tagmanager.css"/>-->
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"/>
+<!--    <link href="/static/css/datepicker.css" rel="stylesheet"> -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/static/images/ctftime-logo-avatar.png">
+    <meta name="apple-mobile-web-app-title" content="CTFtime">
+    <meta name="application-name" content="CTFtime">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    
+    
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.formset.js"></script>
+
+    
+    
+    
+  </head>
+
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="//ctftime.org/"><img src="/static/images/ctftime-logo.png" alt="CTFtime.org" border="0" /></a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/ctfs">CTFs</a></li>
+              <li><a href="/event/list/upcoming">Upcoming</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archive  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="/event/list/past">Past events</a></li>
+                  <li><a href="/tasks/">Tasks</a></li>
+                  <li><a href="/writeups">Writeups</a></li>
+                  </ul>
+              </li>
+              <li><a href="/calendar/">Calendar</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="/stats/">Rating</a></li>
+                  <li><a href="/team/compare">Compare</a></li>
+                  <li><a href="/dating">Get a team</a></li>
+                  </ul>
+              </li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact us  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="/event/mail">For organizers</a></li>
+                  <li><a href="/feedback/">Feedback</a></li>
+                  </ul>
+              </li>
+              <li><a href="/about/">About</a></li>
+            </ul>
+            <ul class="nav pull-right">
+            
+            <li class="divider-vertical"></li>
+                
+                <li><a href="#loginModal" data-toggle="modal">Sign in</a></li>
+                
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    
+
+<ul class="breadcrumb">
+    <li><a href="/">Home</a> <span class="divider">/</span></li>
+    <li><a href="/ctfs">CTFs</a> <span class="divider">/</span></li>
+
+    <li><a href="/event/list/">Events</a> <span class="divider">/</span>
+
+<li class="active">Archive</li>
+</ul>
+
+
+    <div class="container">
+    
+
+    
+
+<div class="page-header">
+<h2>CTF Events</h2>
+</div>
+
+<ul class="nav nav-pills">
+    <li><a href="/event/list/">All</a></li>
+    <li><a href="/event/list/upcoming">Upcoming</a></li>
+    <li class="active"><a href="/event/list/past">Archive</a></li>
+
+
+
+
+    <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Format<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+    <li><a href="/event/list/past/f/1">Jeopardy</a></li>
+    <li><a href="/event/list/past/f/2">Attack-Defence</a></li>
+    <li><a href="/event/list/past/f/3">Hack-quest</a></li>
+    </ul>
+    </li>
+
+
+
+
+    <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Year<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+    <li><a href="/event/list/2015">2015</a></li>
+    <li><a href="/event/list/2014">2014</a></li>
+    <li><a href="/event/list/2013">2013</a></li>
+    <li><a href="/event/list/2012">2012</a></li>
+    <li><a href="/event/list/2011">2011</a></li>
+    </ul>
+    </li>
+
+
+
+    <div class="pull-right"><a href="/calendar/"><img src="/static/images/icon_cal.png" border="0" /></a><a href="/event/list/archive/rss/"><img src="/static/images/rss_icon.png" border="0" /></a></div>
+
+
+</ul>
+
+<table class="table table-striped"><tr><th>Name</th><th>Date</th><th>Format</th><th>Location</th><th colspan="2">Notes</th></tr><tr><td><a href="/event/404">33C3 CTF</a></td><td>27 Dec., 20:00 UTC &mdash; 29 Dec. 2016, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/407">The 318br, DESEC, and SucuriHC Capture The Flag (3DSCTF)</a></td><td>17 Dec., 04:00 UTC &mdash; 24 Dec. 2016, 04:00 UTC</td><td>Jeopardy</td><td></td><td></td><td><tr><td><a href="/event/398">WhiteHat Grand Prix 2016</a></td><td>17 Dec., 02:00 UTC &mdash; 18 Dec. 2016, 02:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/370">SharifCTF 7</a></td><td>16 Dec., 14:30 UTC &mdash; 18 Dec. 2016, 14:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/354">SECCON 2016 Online CTF</a></td><td>10 Dec., 06:00 UTC &mdash; 11 Dec. 2016, 06:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/400">HITCON CTF 2016 Final</a></td><td>02 Dec., 02:00 UTC &mdash; 03 Dec. 2016, 07:30 UTC</td><td>Attack-Defense</td><td>
+
+    Taiwan, Taipei
+
+</td><td></td><td><tr><td><a href="/event/403">QCTF Starter 2016</a></td><td>27 Nov., 04:00 UTC &mdash; 27 Nov. 2016, 18:00 UTC</td><td>Jeopardy</td><td>
+
+    Yekaterinburg, Russia
+
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/391">Juniors CTF 2016</a></td><td>25 Nov., 15:00 UTC &mdash; 27 Nov. 2016, 15:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/397">InnoCTF 2016</a></td><td>20 Nov., 07:00 UTC &mdash; 20 Nov. 2016, 15:00 UTC</td><td>Jeopardy</td><td>
+
+    Innopolis, Tatarstan, Russia
+
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/389">RC3 CTF 2016</a></td><td>19 Nov., 02:00 UTC &mdash; 21 Nov. 2016, 07:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/301">GreHack CTF 2016</a></td><td>18 Nov., 20:00 UTC &mdash; 19 Nov. 2016, 06:00 UTC</td><td>Jeopardy</td><td>
+
+    France, Grenoble
+
+</td><td></td><td><tr><td><a href="/event/399">Trend Micro CTF 2016 The Final</a></td><td>18 Nov., 15:14 UTC &mdash; 19 Nov. 2016, 15:17 UTC</td><td>Attack-Defense</td><td>
+
+    Tokyo, Japan
+
+</td><td></td><td><tr><td><a href="/event/385">Qiwi-Infosec CTF-2016</a></td><td>17 Nov., 07:00 UTC &mdash; 18 Nov. 2016, 15:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/358">RuCTFE 2016</a></td><td>12 Nov., 10:00 UTC &mdash; 12 Nov. 2016, 19:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/396">CSAW CTF Final Round 2016</a></td><td>10 Nov., 22:00 UTC &mdash; 12 Nov. 2016, 10:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/393">DefCamp CTF Finals 2016</a></td><td>10 Nov., 11:00 UTC &mdash; 11 Nov. 2016, 11:00 UTC</td><td>Jeopardy</td><td>
+
+    Bucharest, Romania
+
+</td><td></td><td><tr><td><a href="/event/388">Moscow CTF School 2016</a></td><td>06 Nov., 11:00 UTC &mdash; 06 Nov. 2016, 16:00 UTC</td><td>Jeopardy</td><td>
+
+    Moscow, Russia
+
+</td><td></td><td><tr><td><a href="/event/384">School CTF 2016</a></td><td>06 Nov., 05:00 UTC &mdash; 06 Nov. 2016, 13:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/345">Hack The Vote 2016</a></td><td>04 Nov., 23:00 UTC &mdash; 06 Nov. 2016, 23:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/342">EKOPARTY CTF 2016</a></td><td>26 Oct., 20:00 UTC &mdash; 28 Oct. 2016, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/386">ECTF 2016</a></td><td>23 Oct., 02:00 UTC &mdash; 23 Oct. 2016, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/387">CBIT Headstart CTF 2016</a></td><td>21 Oct., 05:00 UTC &mdash; 22 Oct. 2016, 10:00 UTC</td><td>Jeopardy</td><td>
+
+    Telangana, India
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/380">Hack.lu CTF 2016</a></td><td>19 Oct., 10:00 UTC &mdash; 20 Oct. 2016, 10:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/390">KrasCTF 2016</a></td><td>15 Oct., 02:00 UTC &mdash; 16 Oct. 2016, 14:00 UTC</td><td>Jeopardy</td><td>
+
+    Krasnoyarsk, Russia
+
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/371">UConn CyberSEED 2016</a></td><td>10 Oct., 18:00 UTC &mdash; 11 Oct. 2016, 18:00 UTC</td><td>Jeopardy</td><td>
+
+    Storrs, CT, USA
+
+</td><td></td><td><tr><td><a href="/event/365">CyberSEED Social Engineering Competition 2016</a></td><td>10 Oct., 13:00 UTC &mdash; 11 Oct. 2016, 21:00 UTC</td><td>Jeopardy</td><td>
+
+    Storrs, CT USA
+
+</td><td></td><td><tr><td><a href="/event/375">SpbCTF 2016</a></td><td>09 Oct., 07:00 UTC &mdash; 09 Oct. 2016, 16:00 UTC</td><td>Jeopardy</td><td>
+
+    Saint-Petersburg, Russia
+
+</td><td><b>Academic teams only</b></td><td><tr><td><a href="/event/355">HITCON CTF 2016 Quals</a></td><td>08 Oct., 02:00 UTC &mdash; 10 Oct. 2016, 02:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/339">Hackover CTF 2016</a></td><td>07 Oct., 18:00 UTC &mdash; 09 Oct. 2016, 06:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/331">TUM CTF 2016</a></td><td>30 Sept., 16:00 UTC &mdash; 02 Oct. 2016, 16:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/362">SibirCTF 2016</a></td><td>29 Sept., 03:00 UTC &mdash; 01 Oct. 2016, 14:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/356">DefCamp CTF Qualification 2016</a></td><td>24 Sept., 07:00 UTC &mdash; 25 Sept. 2016, 07:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/363">Cyber@Hack 2016</a></td><td>23 Sept., 19:30 UTC &mdash; 24 Sept. 2016, 19:30 UTC</td><td>Jeopardy</td><td>
+
+    Toulouse, France
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/360">H4ckIT CTF 2016 Online</a></td><td>23 Sept., 18:00 UTC &mdash; 02 Oct. 2016, 17:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/368">M*CTF 2016 Quals</a></td><td>23 Sept., 15:00 UTC &mdash; 25 Sept. 2016, 15:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/347">CSAW CTF Qualification Round 2016</a></td><td>16 Sept., 23:00 UTC &mdash; 18 Sept. 2016, 23:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/330">STEM CTF: Cyber Challenge 2016</a></td><td>16 Sept., 17:00 UTC &mdash; 17 Sept. 2016, 17:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/349">BSides Colombia CTF</a></td><td>16 Sept., 16:00 UTC &mdash; 17 Sept. 2016, 16:00 UTC</td><td>Jeopardy</td><td>
+
+    Medellín, Colombia
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/328">VolgaCTF 2016 Finals</a></td><td>15 Sept., 06:00 UTC &mdash; 15 Sept. 2016, 15:00 UTC</td><td>Attack-Defense</td><td>
+
+    Samara, Russian Federation
+
+</td><td></td><td><tr><td><a href="/event/357">WhiteHat Contest 12</a></td><td>10 Sept., 02:00 UTC &mdash; 11 Sept. 2016, 02:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/327">ASIS CTF Finals 2016</a></td><td>09 Sept., 17:00 UTC &mdash; 11 Sept. 2016, 17:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/336">Tokyo Westerns/MMA CTF 2nd 2016</a></td><td>03 Sept., 00:00 UTC &mdash; 05 Sept. 2016, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/348">CTF(x) 2016</a></td><td>26 Aug., 20:00 UTC &mdash; 28 Aug. 2016, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td><b>School teams only</b></td><td><tr><td><a href="/event/346">Facebook Capture The Flag 2016</a></td><td>25 Aug., 02:00 UTC &mdash; 26 Aug. 2016, 11:00 UTC</td><td>Jeopardy</td><td>
+
+    Singapore
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/350">BioTerra CTF 2016</a></td><td>20 Aug., 20:08 UTC &mdash; 21 Aug. 2016, 21:08 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/341">Hackcon 2016</a></td><td>19 Aug., 14:30 UTC &mdash; 20 Aug. 2016, 18:29 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/319">IceCTF 2016</a></td><td>12 Aug., 16:00 UTC &mdash; 26 Aug. 2016, 16:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/344">DEF CON CTF 2016</a></td><td>05 Aug., 18:00 UTC &mdash; 07 Aug. 2016, 21:00 UTC</td><td>Attack-Defense</td><td>
+
+    Las Vegas, United States
+
+</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/343">OpenCTF 2016</a></td><td>05 Aug., 17:00 UTC &mdash; 07 Aug. 2016, 04:00 UTC</td><td>Jeopardy</td><td>
+
+    Las Vegas, United States
+
+</td><td></td><td><tr><td><a href="/event/340">Trend Micro CTF 2016 Online Qualifier</a></td><td>30 July, 04:00 UTC &mdash; 31 July 2016, 04:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/338">LabyREnth 2016</a></td><td>15 July, 23:59 UTC &mdash; 14 Aug. 2016, 23:59 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/333">ABCTF 2016</a></td><td>15 July, 18:23 UTC &mdash; 22 July 2016, 18:23 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/335">SECUINSIDE CTF Quals 2016</a></td><td>09 July, 03:00 UTC &mdash; 10 July 2016, 03:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/332">Nuit du Hack CTF Finals 2016</a></td><td>02 July, 19:30 UTC &mdash; 03 July 2016, 04:00 UTC</td><td>Attack-Defense</td><td>
+
+    Paris, France
+
+</td><td></td><td><tr><td><a href="/event/334">IBST.PSU CTF 2016</a></td><td>26 June, 06:30 UTC &mdash; 26 June 2016, 13:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/316">AltayCTF-2016</a></td><td>26 June, 00:00 UTC &mdash; 28 June 2016, 03:00 UTC</td><td>Jeopardy</td><td>
+
+    Russia, Barnaul
+
+</td><td></td><td><tr><td><a href="/event/329">WhiteHat Contest 11</a></td><td>25 June, 02:00 UTC &mdash; 25 June 2016, 10:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/314">BackdoorCTF 2016</a></td><td>04 June, 15:30 UTC &mdash; 05 June 2016, 15:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/322">ALICTF 2016</a></td><td>04 June, 00:00 UTC &mdash; 06 June 2016, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/326">Security Fest 2016</a></td><td>01 June, 10:00 UTC &mdash; 02 June 2016, 16:00 UTC</td><td>Jeopardy</td><td>
+
+    Gothenburg, Sweden
+
+</td><td></td><td><tr><td><a href="/event/321">Belluminar 2016</a></td><td>01 June, 05:00 UTC &mdash; 02 June 2016, 10:00 UTC</td><td>Jeopardy</td><td></td><td></td><td><tr><td><a href="/event/305">TJCTF 2016</a></td><td>28 May, 01:00 UTC &mdash; 31 May 2016, 01:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/325">HITB CTF Amsterdam 2016</a></td><td>26 May, 10:00 UTC &mdash; 27 May 2016, 18:00 UTC</td><td>Jeopardy</td><td>
+
+    Amsterdam, Netherlands
+
+</td><td></td><td><tr><td><a href="/event/320">DEF CON CTF Qualifier 2016</a></td><td>21 May, 00:00 UTC &mdash; 23 May 2016, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/310">NorthSec 2016</a></td><td>20 May, 23:00 UTC &mdash; 22 May 2016, 20:00 UTC</td><td>Hack quest</td><td>
+
+    Marche Bonsecours, Montreal, Canada
+
+</td><td></td><td><tr><td><a href="/event/308">CONFidence CTF 2016</a></td><td>19 May, 08:00 UTC &mdash; 20 May 2016, 13:00 UTC</td><td>Jeopardy</td><td>
+
+    Poland, Cracow
+
+</td><td></td><td><tr><td><a href="/event/323">PHDays CTF 2016</a></td><td>17 May, 08:00 UTC &mdash; 18 May 2016, 14:00 UTC</td><td>Jeopardy</td><td>
+
+    Moscow, Russia
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/295">HSCTF 3</a></td><td>14 May, 05:00 UTC &mdash; 21 May 2016, 09:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/312">TU CTF 2016</a></td><td>13 May, 22:00 UTC &mdash; 15 May 2016, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/298">RCC-2016</a></td><td>11 May, 07:00 UTC &mdash; 11 May 2016, 15:00 UTC</td><td>Attack-Defense</td><td>
+
+    Moscow, Russia
+
+</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/275">ASIS CTF Quals 2016</a></td><td>07 May, 03:30 UTC &mdash; 09 May 2016, 03:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/317">Codegate CTF Finals 2016</a></td><td>02 May, 12:20 UTC &mdash; 03 May 2016, 01:00 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td><b>Prequalified teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/303">Google Capture The Flag 2016</a></td><td>29 April, 17:00 UTC &mdash; 01 May 2016, 16:59 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/318">OmCTF 2016</a></td><td>24 April, 01:00 UTC &mdash; 24 April 2016, 08:00 UTC</td><td>Attack-Defense</td><td>
+
+    Omsk, Russian Federation
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/263">0CTF 2016 Finals</a></td><td>22 April, 22:00 UTC &mdash; 24 April 2016, 07:00 UTC</td><td>Attack-Defense</td><td>
+
+    Shanghai, China
+
+</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/276">Blaze CTF 2016</a></td><td>20 April, 04:20 UTC &mdash; 24 April 2016, 04:20 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/315">PlaidCTF 2016</a></td><td>15 April, 21:00 UTC &mdash; 17 April 2016, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/307">Teaser CONFidence CTF 2016</a></td><td>14 April, 16:00 UTC &mdash; 15 April 2016, 16:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/253">RuCTF Finals 2016</a></td><td>14 April, 09:00 UTC &mdash; 18 April 2016, 16:00 UTC</td><td>Attack-Defense</td><td>
+
+    Yekaterinburg, Russian Federation
+
+</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/313">PACTF 2016</a></td><td>10 April, 00:00 UTC &mdash; 30 April 2016, 23:59 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/311">angstromCTF 2016</a></td><td>09 April, 16:00 UTC &mdash; 17 April 2016, 04:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/289">SSCTF 2016 Final</a></td><td>09 April, 00:00 UTC &mdash; 10 April 2016, 12:00 UTC</td><td>Attack-Defense</td><td>
+
+    Xi&#39;an, China
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/292">Sthack 2016</a></td><td>08 April, 21:00 UTC &mdash; 09 April 2016, 09:00 UTC</td><td>Jeopardy</td><td>
+
+    Bordeaux, France
+
+</td><td></td><td><tr><td><a href="/event/309">sCTF 2016 Q1</a></td><td>08 April, 00:00 UTC &mdash; 15 April 2016, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/284">Nuit du Hack CTF Quals 2016</a></td><td>01 April, 21:59 UTC &mdash; 02 April 2016, 21:59 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/302">C4CTF 2016</a></td><td>28 March, 06:00 UTC &mdash; 28 March 2016, 16:00 UTC</td><td>Jeopardy</td><td></td><td></td><td><tr><td><a href="/event/306">Securinets CTF Quals 2016</a></td><td>26 March, 20:00 UTC &mdash; 27 March 2016, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/281">Pwn2Win CTF 2016</a></td><td>25 March, 16:37 UTC &mdash; 27 March 2016, 16:37 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/279">VolgaCTF 2016 Quals</a></td><td>25 March, 15:00 UTC &mdash; 27 March 2016, 15:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/294">UFO CTF SCHOOL 2016</a></td><td>21 March, 12:00 UTC &mdash; 31 March 2016, 12:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/293">LASACTF 2016</a></td><td>19 March, 18:00 UTC &mdash; 26 March 2016, 18:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td><b>School teams only</b></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/264">BCTF 2016</a></td><td>19 March, 02:00 UTC &mdash; 21 March 2016, 02:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/283">Insomni&#39;hack 2016</a></td><td>18 March, 21:00 UTC &mdash; 19 March 2016, 07:00 UTC</td><td>Jeopardy</td><td>
+
+    Switzerland, Geneva
+
+</td><td></td><td><tr><td><a href="/event/299">Codegate CTF 2016 Quals</a></td><td>12 March, 21:00 UTC &mdash; 13 March 2016, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/297">Sunshine CTF 2016</a></td><td>12 March, 16:00 UTC &mdash; 13 March 2016, 20:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/304">ScytheCTF 2016</a></td><td>12 March, 15:30 UTC &mdash; 13 March 2016, 03:30 UTC</td><td>Jeopardy</td><td>
+
+    Roorkee, India
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/262">0CTF 2016 Quals</a></td><td>12 March, 00:00 UTC &mdash; 14 March 2016, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/291">Sécu&#39;RT 2016</a></td><td>10 March, 13:30 UTC &mdash; 10 March 2016, 22:30 UTC</td><td>Jeopardy</td><td>
+
+    Montbéliard, France
+
+</td><td></td><td><tr><td><a href="/event/252">Boston Key Party CTF 2016</a></td><td>04 March, 22:00 UTC &mdash; 06 March 2016, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/282">SSCTF 2016 Quals</a></td><td>27 Feb., 00:00 UTC &mdash; 29 Feb. 2016, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/290">Internetwache CTF 2016</a></td><td>20 Feb., 11:00 UTC &mdash; 21 Feb. 2016, 23:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/280">Sharif University CTF 2016</a></td><td>05 Feb., 06:30 UTC &mdash; 06 Feb. 2016, 18:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/287">SECCON 2015 Final competition (International) </a></td><td>31 Jan., 02:00 UTC &mdash; 31 Jan. 2016, 07:30 UTC</td><td>Hack quest</td><td>
+
+    Tokyo, Japan
+
+</td><td></td><td><tr><td><a href="/event/286">SECCON 2015 Final competition (Intercollege) </a></td><td>30 Jan., 03:00 UTC &mdash; 30 Jan. 2016, 07:00 UTC</td><td>Attack-Defense</td><td>
+
+    Tokyo, Japan
+
+</td><td><b>Academic teams only</b></td><td><tr><td><a href="/event/285">HackIM 2016</a></td><td>29 Jan., 15:30 UTC &mdash; 31 Jan. 2016, 15:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/288">Break In 2016</a></td><td>23 Jan., 18:30 UTC &mdash; 24 Jan. 2016, 18:30 UTC</td><td></td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/258">Insomni&#39;hack teaser 2016</a></td><td>16 Jan., 09:00 UTC &mdash; 17 Jan. 2016, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/278">32C3 CTF</a></td><td>27 Dec., 20:00 UTC &mdash; 29 Dec. 2015, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/255">WhiteHat Grand Prix – Final Round 2015</a></td><td>19 Dec., 02:00 UTC &mdash; 19 Dec. 2015, 10:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/235">FAUST CTF 2015</a></td><td>18 Dec., 16:00 UTC &mdash; 19 Dec. 2015, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/267">RCTF 2015 Finals</a></td><td>12 Dec., 01:00 UTC &mdash; 13 Dec. 2015, 05:00 UTC</td><td>Attack-Defense</td><td>
+
+    Fuzhou, China
+
+</td><td></td><td><tr><td><a href="/event/277">No cON Name CTF Finals 2015</a></td><td>10 Dec., 09:00 UTC &mdash; 10 Dec. 2015, 19:00 UTC</td><td>Jeopardy</td><td>
+
+    Barcelona, Spain
+
+</td><td></td><td><tr><td><a href="/event/274">SECCON 2015 Online CTF</a></td><td>05 Dec., 06:00 UTC &mdash; 06 Dec. 2015, 06:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/273">HITCON CTF 2015 Final</a></td><td>05 Dec., 02:00 UTC &mdash; 06 Dec. 2015, 07:30 UTC</td><td>Attack-Defense</td><td>
+
+    5F , No.1, Jingmao 2nd Rd., Nangang District, Taipei City 11568, Taiwan (R.O.C.)
+
+</td><td></td><td><tr><td><a href="/event/256">UCSB iCTF 2015</a></td><td>04 Dec., 18:00 UTC &mdash; 05 Dec. 2015, 18:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/242">9447 Security Society CTF 2015</a></td><td>27 Nov., 23:00 UTC &mdash; 29 Nov. 2015, 23:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/228">RuCTFE 2015</a></td><td>21 Nov., 10:00 UTC &mdash; 21 Nov. 2015, 19:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/257">Trend Micro CTF Asia Pacific &amp; Japan 2015 Final</a></td><td>21 Nov., 04:30 UTC &mdash; 22 Nov. 2015, 06:30 UTC</td><td>Attack-Defense</td><td>
+
+    Tokyo, Japan
+
+</td><td></td><td><tr><td><a href="/event/251">GreHack CTF 2015</a></td><td>20 Nov., 21:00 UTC &mdash; 21 Nov. 2015, 08:00 UTC</td><td>Jeopardy</td><td></td><td></td><td><tr><td><a href="/event/270">Defcamp CTF Finals 2015</a></td><td>19 Nov., 13:00 UTC &mdash; 20 Nov. 2015, 13:00 UTC</td><td>Jeopardy</td><td>
+
+    Bucharest, Romania
+
+</td><td></td><td><tr><td><a href="/event/260">Hack Dat Kiwi 2015</a></td><td>18 Nov., 05:00 UTC &mdash; 20 Nov. 2015, 05:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/266">RCTF 2015 Quals</a></td><td>14 Nov., 00:00 UTC &mdash; 15 Nov. 2015, 12:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/271">CSAW CTF Final Round 2015</a></td><td>12 Nov., 02:00 UTC &mdash; 14 Nov. 2015, 14:00 UTC</td><td>Jeopardy</td><td>
+
+    New York, USA
+
+</td><td></td><td><tr><td><a href="/event/224">Hackfest 2015</a></td><td>06 Nov., 21:00 UTC &mdash; 07 Nov. 2015, 07:00 UTC</td><td>Hack quest</td><td>
+
+    Québec, QC, Canada
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/268">Power of XX 2015</a></td><td>06 Nov., 01:00 UTC &mdash; 07 Nov. 2015, 09:00 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/259">g0s CTF 2015</a></td><td>05 Nov., 04:30 UTC &mdash; 06 Nov. 2015, 10:30 UTC</td><td>Jeopardy</td><td>
+
+    New Delhi, India
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/269">Belluminar 2015</a></td><td>05 Nov., 02:00 UTC &mdash; 06 Nov. 2015, 04:00 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td></td><td><tr><td><a href="/event/254">School CTF 2015</a></td><td>04 Nov., 06:00 UTC &mdash; 04 Nov. 2015, 11:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/240">UConn CyberSEED 2015</a></td><td>29 Oct., 12:00 UTC &mdash; 30 Oct. 2015, 22:00 UTC</td><td>Jeopardy</td><td>
+
+    Storrs, CT, USA
+
+</td><td></td><td><tr><td><a href="/event/238">TUM CTF Teaser</a></td><td>24 Oct., 12:00 UTC &mdash; 25 Oct. 2015, 12:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/246">WhiteHat Grand Prix – Qualification Round 2015</a></td><td>24 Oct., 02:00 UTC &mdash; 25 Oct. 2015, 02:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/261">2nd Annual MalCon CTF</a></td><td>22 Oct., 13:00 UTC &mdash; 22 Oct. 2015, 22:00 UTC</td><td>Jeopardy</td><td>
+
+    Fajardo, Puerto Rico
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/247">EKOPARTY CTF 2015</a></td><td>22 Oct., 12:00 UTC &mdash; 23 Oct. 2015, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/244">Hack.lu CTF 2015</a></td><td>20 Oct., 08:00 UTC &mdash; 22 Oct. 2015, 08:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/245">HITCON CTF 2015 Quals</a></td><td>17 Oct., 02:00 UTC &mdash; 18 Oct. 2015, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/249">Hackover CTF 2015</a></td><td>16 Oct., 18:00 UTC &mdash; 18 Oct. 2015, 06:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/223">ASIS CTF Finals 2015</a></td><td>10 Oct., 06:30 UTC &mdash; 12 Oct. 2015, 06:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/239">Defcamp CTF Qualification 2015</a></td><td>02 Oct., 21:00 UTC &mdash; 04 Oct. 2015, 09:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/230">Trend Micro CTF Asia Pacific &amp; Japan 2015 Online Qualifier</a></td><td>26 Sept., 04:00 UTC &mdash; 27 Sept. 2015, 04:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/227">CSAW CTF Qualification Round 2015</a></td><td>18 Sept., 22:00 UTC &mdash; 20 Sept. 2015, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/216">STEM CTF: Cyber Challenge 2015</a></td><td>11 Sept., 19:00 UTC &mdash; 12 Sept. 2015, 23:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/232">VolgaCTF 2015 Finals</a></td><td>10 Sept., 06:00 UTC &mdash; 10 Sept. 2015, 15:00 UTC</td><td>Attack-Defense</td><td>
+
+    Russia, Samara
+
+</td><td></td><td><tr><td><a href="/event/234">MMA CTF 1st 2015</a></td><td>05 Sept., 00:00 UTC &mdash; 07 Sept. 2015, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/237">Inc0gnito CTF 2015</a></td><td>22 Aug., 09:00 UTC &mdash; 23 Aug. 2015, 09:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/231">Camp CTF 2015</a></td><td>13 Aug., 16:00 UTC &mdash; 16 Aug. 2015, 16:00 UTC</td><td>Jeopardy</td><td>
+
+    Ziegeleipark Mildenberg, Germany
+
+</td><td></td><td><tr><td><a href="/event/225">OpenCTF 2015</a></td><td>07 Aug., 16:00 UTC &mdash; 09 Aug. 2015, 04:00 UTC</td><td>Jeopardy</td><td>
+
+    Las Vegas, NV, USA (DEFCON)
+
+</td><td></td><td><tr><td><a href="/event/213">DEF CON CTF 2015</a></td><td>06 Aug., 00:00 UTC &mdash; 09 Aug. 2015, 20:00 UTC</td><td>Attack-Defense</td><td>
+
+    Las Vegas, NV, USA
+
+</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/226">WhiteHat Contest 10</a></td><td>25 July, 02:00 UTC &mdash; 25 July 2015, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/207">PoliCTF 2015</a></td><td>10 July, 09:00 UTC &mdash; 12 July 2015, 09:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/222">AltayCTF 2015</a></td><td>22 June, 09:30 UTC &mdash; 22 June 2015, 18:00 UTC</td><td>Jeopardy</td><td>
+
+    Barnaul, Russian Federation
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/203">HITB CTF Amsterdam 2015</a></td><td>28 May, 07:00 UTC &mdash; 29 May 2015, 15:00 UTC</td><td>Jeopardy</td><td>
+
+    Amsterdam, The Netherlands
+
+</td><td></td><td><tr><td><a href="/event/221">PHD CTF Finals 2015</a></td><td>26 May, 07:00 UTC &mdash; 27 May 2015, 15:00 UTC</td><td>Jeopardy</td><td>
+
+    Moscow, Russia
+
+</td><td></td><td><tr><td><a href="/event/206">CONFidence CTF 2015</a></td><td>25 May, 10:00 UTC &mdash; 26 May 2015, 13:00 UTC</td><td>Jeopardy</td><td>
+
+    Cracow, Poland
+
+</td><td></td><td><tr><td><a href="/event/324">NorthSec 2015</a></td><td>22 May, 19:30 UTC &mdash; 24 May 2015, 15:00 UTC</td><td>Hack quest</td><td>
+
+    Montreal, Canada
+
+</td><td></td><td><tr><td><a href="/event/220">14th HUST Hacking Festival</a></td><td>22 May, 09:00 UTC &mdash; 23 May 2015, 09:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/212">DEF CON CTF Qualifier 2015</a></td><td>16 May, 00:00 UTC &mdash; 18 May 2015, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/219">Dz-Hack-Event 2015</a></td><td>09 May, 20:00 UTC &mdash; 10 May 2015, 08:00 UTC</td><td>Jeopardy</td><td>
+
+    Algiers, Algeria
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/188">ASIS CTF Quals 2015</a></td><td>09 May, 05:30 UTC &mdash; 11 May 2015, 05:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/217">School CTF Spring 2015</a></td><td>03 May, 06:00 UTC &mdash; 03 May 2015, 11:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/197">VolgaCTF 2015 Quals</a></td><td>01 May, 12:00 UTC &mdash; 03 May 2015, 12:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/218">RuCTF Finals 2015</a></td><td>26 April, 09:00 UTC &mdash; 27 April 2015, 09:00 UTC</td><td>Attack-Defense</td><td>
+
+    Ekaterinburg, Russia
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/205">Teaser CONFidence CTF 2015</a></td><td>25 April, 08:00 UTC &mdash; 26 April 2015, 08:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/215">0CTF 2015 Finals</a></td><td>25 April, 00:00 UTC &mdash; 26 April 2015, 10:00 UTC</td><td>Attack-Defense</td><td>
+
+    Shanghai, China
+
+</td><td></td><td><tr><td><a href="/event/185">PlaidCTF 2015</a></td><td>17 April, 21:00 UTC &mdash; 19 April 2015, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/175">UCSB iCTF 2014</a></td><td>10 April, 15:00 UTC &mdash; 11 April 2015, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/214">Codegate CTF Finals 2015</a></td><td>07 April, 05:00 UTC &mdash; 08 April 2015, 01:00 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td></td><td><tr><td><a href="/event/204">Hack Zone Tunisia 2015</a></td><td>04 April, 17:00 UTC &mdash; 05 April 2015, 07:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/196">Nuit du Hack CTF Quals 2015</a></td><td>03 April, 20:00 UTC &mdash; 04 April 2015, 19:59 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/192">UIUCTF 2015</a></td><td>03 April, 03:00 UTC &mdash; 04 April 2015, 03:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/208">BackdoorCTF 2015</a></td><td>01 April, 14:30 UTC &mdash; 02 April 2015, 02:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/198">0CTF 2015 Quals</a></td><td>28 March, 00:00 UTC &mdash; 30 March 2015, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/191">BCTF 2015</a></td><td>21 March, 05:00 UTC &mdash; 23 March 2015, 05:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/211">Securinets CTF Quals 2015</a></td><td>20 March, 19:00 UTC &mdash; 21 March 2015, 19:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/174">Insomni&#39;hack 2015</a></td><td>20 March, 18:00 UTC &mdash; 21 March 2015, 04:00 UTC</td><td>Jeopardy</td><td>
+
+    Geneva, Switzerland
+
+</td><td></td><td><tr><td><a href="/event/200">B-Sides Vancouver 2015</a></td><td>16 March, 08:30 UTC &mdash; 18 March 2015, 23:45 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/201">Codegate CTF Preliminary 2015</a></td><td>14 March, 12:00 UTC &mdash; 15 March 2015, 19:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/210">InCTF 2015 Quals</a></td><td>14 March, 04:30 UTC &mdash; 15 March 2015, 16:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/163">Boston Key Party CTF 2015</a></td><td>27 Feb., 22:00 UTC &mdash; 01 March 2015, 17:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/189">Sharif University CTF Finals 2015</a></td><td>17 Feb., 03:00 UTC &mdash; 17 Feb. 2015, 13:00 UTC</td><td>Jeopardy</td><td>
+
+    Iran, Tehran
+
+</td><td></td><td><tr><td><a href="/event/199">Break In 2015</a></td><td>14 Feb., 18:30 UTC &mdash; 15 Feb. 2015, 06:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/193">Tunisia Hackfest 2015</a></td><td>07 Feb., 08:00 UTC &mdash; 07 Feb. 2015, 20:00 UTC</td><td>Jeopardy</td><td>
+
+    Tunis, Tunisia
+
+</td><td></td><td><tr><td><a href="/event/195">SECCON CTF 2014 Finals</a></td><td>07 Feb., 00:00 UTC &mdash; 08 Feb. 2015, 09:00 UTC</td><td>Jeopardy</td><td>
+
+    Tokyo, Japan
+
+</td><td></td><td><tr><td><a href="/event/190">WCTF  - th3jackers</a></td><td>23 Jan., 20:00 UTC &mdash; 24 Jan. 2015, 08:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/165">Ghost in the Shellcode 2015</a></td><td>16 Jan., 20:30 UTC &mdash; 18 Jan. 2015, 17:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/173">Insomni&#39;hack teaser 2015</a></td><td>10 Jan., 09:00 UTC &mdash; 11 Jan. 2015, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/186">HackIM 2015</a></td><td>09 Jan., 06:30 UTC &mdash; 11 Jan. 2015, 06:30 UTC</td><td>Jeopardy</td><td></td><td></td><td><tr><td><a href="/event/180">31C3 CTF</a></td><td>27 Dec., 20:00 UTC &mdash; 29 Dec. 2014, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/171">RuCTFE 2014</a></td><td>20 Dec., 10:00 UTC &mdash; 20 Dec. 2014, 19:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/164">Ghost in the Shellcode Teaser 2015</a></td><td>13 Dec., 20:00 UTC &mdash; 14 Dec. 2014, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/183">SECCON CTF 2014 Online Qualifications</a></td><td>06 Dec., 00:00 UTC &mdash; 07 Dec. 2014, 08:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/170">9447 Security Society CTF 2014</a></td><td>29 Nov., 11:00 UTC &mdash; 30 Nov. 2014, 23:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/181">CSCAMP CTF Finals 2014</a></td><td>28 Nov., 11:00 UTC &mdash; 29 Nov. 2014, 17:00 UTC</td><td>Jeopardy</td><td>
+
+    Cairo, Egypt
+
+</td><td></td><td><tr><td><a href="/event/182">Defcamp CTF Finals 2014</a></td><td>28 Nov., 09:00 UTC &mdash; 29 Nov. 2014, 09:00 UTC</td><td>Jeopardy</td><td>
+
+    Bucharest, Romania
+
+</td><td></td><td><tr><td><a href="/event/179">CSCAMP CTF Quals 2014</a></td><td>20 Nov., 10:00 UTC &mdash; 22 Nov. 2014, 10:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/184">CSAW CTF Final Round 2014</a></td><td>15 Nov., 02:00 UTC &mdash; 15 Nov. 2014, 14:00 UTC</td><td>Jeopardy</td><td>
+
+    New York, USA
+
+</td><td></td><td><tr><td><a href="/event/176">QIWI CTF 2014</a></td><td>13 Nov., 05:00 UTC &mdash; 14 Nov. 2014, 15:00 UTC</td><td>Jeopardy</td><td>
+
+    Moscow, Russia
+
+</td><td></td><td><tr><td><a href="/event/166">Hackfest 2014</a></td><td>07 Nov., 15:00 UTC &mdash; 08 Nov. 2014, 07:00 UTC</td><td>Jeopardy</td><td>
+
+    Quebec, QC, Canada
+
+</td><td></td><td><tr><td><a href="/event/168">MalCon CTF 2014</a></td><td>30 Oct., 13:00 UTC &mdash; 30 Oct. 2014, 20:00 UTC</td><td>Jeopardy</td><td>
+
+    Fajardo, Puerto Rico
+
+</td><td></td><td><tr><td><a href="/event/172">No cON Name CTF Finals 2014</a></td><td>30 Oct., 08:00 UTC &mdash; 30 Oct. 2014, 16:00 UTC</td><td>Attack-Defense</td><td>
+
+    Barcelona, Spain
+
+</td><td></td><td><tr><td><a href="/event/154">Hack.lu CTF 2014</a></td><td>21 Oct., 08:00 UTC &mdash; 23 Oct. 2014, 08:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/160">UConn CyberSEED 2014</a></td><td>20 Oct., 14:00 UTC &mdash; 22 Oct. 2014, 17:00 UTC</td><td>Jeopardy</td><td>
+
+    Storrs, CT, USA
+
+</td><td></td><td><tr><td><a href="/event/155">Defcamp CTF Qualification 2014</a></td><td>18 Oct., 11:00 UTC &mdash; 20 Oct. 2014, 11:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/169">HITB2014KUL Capture the Flag: Age of Extinction</a></td><td>15 Oct., 02:00 UTC &mdash; 16 Oct. 2014, 10:00 UTC</td><td>Attack-Defense</td><td>
+
+    Kuala Lumpur, Malaysia
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/147">ASIS CTF Finals 2014</a></td><td>11 Oct., 06:30 UTC &mdash; 13 Oct. 2014, 06:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/167">MalCon 2014 Quals</a></td><td>03 Oct., 16:00 UTC &mdash; 06 Oct. 2014, 16:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/162">if(is) - CTF 2014</a></td><td>27 Sept., 09:00 UTC &mdash; 27 Sept. 2014, 18:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/159">Sharif University CTF 2014</a></td><td>26 Sept., 10:30 UTC &mdash; 27 Sept. 2014, 18:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/152">CSAW CTF Qualification Round 2014</a></td><td>19 Sept., 22:00 UTC &mdash; 21 Sept. 2014, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/153">WaspNest CTF - AppSecUSA 2014</a></td><td>18 Sept., 15:00 UTC &mdash; 19 Sept. 2014, 22:30 UTC</td><td>Jeopardy</td><td>
+
+    Denver, Colorado, USA
+
+</td><td></td><td><tr><td><a href="/event/158">No cON Name CTF Quals 2014</a></td><td>13 Sept., 22:00 UTC &mdash; 14 Sept. 2014, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/161">VolgaCTF 2014 Finals</a></td><td>11 Sept., 05:00 UTC &mdash; 11 Sept. 2014, 14:00 UTC</td><td>Attack-Defense</td><td>
+
+    Samara, Russia
+
+</td><td></td><td><tr><td><a href="/event/148">HITCON CTF 2014</a></td><td>16 Aug., 04:00 UTC &mdash; 18 Aug. 2014, 04:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/157">APAIUT-CERT Quals 2014</a></td><td>14 Aug., 07:30 UTC &mdash; 15 Aug. 2014, 07:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/151">OpenCTF 2014</a></td><td>07 Aug., 18:00 UTC &mdash; 10 Aug. 2014, 04:00 UTC</td><td>Jeopardy</td><td>
+
+    Las Vegas, NV, USA
+
+</td><td></td><td><tr><td><a href="/event/134">DEF CON CTF 2014</a></td><td>07 Aug., 18:00 UTC &mdash; 10 Aug. 2014, 22:00 UTC</td><td>Attack-Defense</td><td>
+
+    Las Vegas, NV, USA
+
+</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/144">SECUINSIDE CTF Finals 2014</a></td><td>08 July, 01:00 UTC &mdash; 09 July 2014, 01:00 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td></td><td><tr><td><a href="/event/150">Pwnium CTF 2014</a></td><td>04 July, 19:00 UTC &mdash; 05 July 2014, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/149">Nuit du Hack CTF Finals 2014</a></td><td>28 June, 21:00 UTC &mdash; 29 June 2014, 08:00 UTC</td><td>Attack-Defense</td><td>
+
+    Paris, France
+
+</td><td></td><td><tr><td><a href="/event/143">SECUINSIDE CTF Quals 2014</a></td><td>31 May, 06:00 UTC &mdash; 01 June 2014, 12:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/139">HITB CTF Amsterdam 2014</a></td><td>29 May, 00:00 UTC &mdash; 30 May 2014, 00:00 UTC</td><td>Jeopardy</td><td>
+
+    Amsterdam, Netherlands
+
+</td><td></td><td><tr><td><a href="/event/146">PHD CTF Finals 2014</a></td><td>21 May, 04:00 UTC &mdash; 22 May 2014, 13:00 UTC</td><td>Attack-Defense</td><td>
+
+    Moscow, Russia
+
+</td><td></td><td><tr><td><a href="/event/129">DEF CON CTF Qualifier 2014</a></td><td>17 May, 00:00 UTC &mdash; 19 May 2014, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/136">ASIS CTF Quals  2014</a></td><td>08 May, 14:30 UTC &mdash; 10 May 2014, 14:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/145">NorthSec 2014</a></td><td>25 April, 23:00 UTC &mdash; 27 April 2014, 19:30 UTC</td><td>Hack quest</td><td>
+
+    Montreal, Canada
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/123">RuCTF Finals 2014</a></td><td>20 April, 03:00 UTC &mdash; 20 April 2014, 14:00 UTC</td><td>Attack-Defense</td><td>
+
+    Ekaterinburg, Russia
+
+</td><td></td><td><tr><td><a href="/event/140">NotSoSecure CTF 2014</a></td><td>18 April, 09:00 UTC &mdash; 20 April 2014, 15:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/119">PlaidCTF 2014</a></td><td>11 April, 21:00 UTC &mdash; 13 April 2014, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/142">Nuit du Hack CTF Quals 2014</a></td><td>04 April, 22:00 UTC &mdash; 05 April 2014, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/133">Codegate CTF Finals 2014</a></td><td>02 April, 05:00 UTC &mdash; 03 April 2014, 01:00 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td></td><td><tr><td><a href="/event/137">VolgaCTF 2014 Quals</a></td><td>28 March, 15:00 UTC &mdash; 30 March 2014, 15:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/141">backdoorCTF 2014</a></td><td>21 March, 22:00 UTC &mdash; 23 March 2014, 10:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/127">Insomni&#39;hack 2014</a></td><td>21 March, 17:00 UTC &mdash; 22 March 2014, 04:00 UTC</td><td>Jeopardy</td><td>
+
+    Geneva, Switzerland
+
+</td><td></td><td><tr><td><a href="/event/122">RuCTF Quals 2014</a></td><td>08 March, 14:00 UTC &mdash; 10 March 2014, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/128">DEFKTHON CTF 2014</a></td><td>03 March, 03:30 UTC &mdash; 04 March 2014, 12:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/120">Boston Key Party CTF 2014</a></td><td>28 Feb., 17:00 UTC &mdash; 02 March 2014, 05:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/132">Codegate CTF Preliminary 2014</a></td><td>22 Feb., 12:00 UTC &mdash; 23 Feb. 2014, 18:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/138">RootedArena 2014</a></td><td>21 Feb., 16:00 UTC &mdash; 23 Feb. 2014, 23:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/130">Olympic CTF Sochi 2014</a></td><td>07 Feb., 16:14 UTC &mdash; 09 Feb. 2014, 16:14 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/116">PHD CTF Quals 2014</a></td><td>25 Jan., 08:00 UTC &mdash; 27 Jan. 2014, 08:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/135">HackIM 2014</a></td><td>24 Jan., 18:30 UTC &mdash; 26 Jan. 2014, 18:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/118">Ghost in the Shellcode 2014</a></td><td>17 Jan., 20:30 UTC &mdash; 19 Jan. 2014, 18:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/131">Break In 2014</a></td><td>11 Jan., 12:30 UTC &mdash; 13 Jan. 2014, 00:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/126">Ghost in the Shellcode Teaser 2014</a></td><td>04 Jan., 19:00 UTC &mdash; 05 Jan. 2014, 02:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/121">30C3 CTF</a></td><td>27 Dec., 19:00 UTC &mdash; 29 Dec. 2013, 19:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/125">OWASP ALGERIA CTF 2013</a></td><td>22 Dec., 19:00 UTC &mdash; 24 Dec. 2013, 19:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/114">RuCTFE 2013</a></td><td>14 Dec., 10:00 UTC &mdash; 14 Dec. 2013, 19:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/112">UCSB iCTF 2013</a></td><td>06 Dec., 16:00 UTC &mdash; 07 Dec. 2013, 01:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/104">Sharif University CTF Finals 2013</a></td><td>18 Nov., 10:00 UTC &mdash; 18 Nov. 2013, 18:00 UTC</td><td>Jeopardy</td><td>
+
+    Tehran, Iran
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/117">Defcamp CTF Qualification 2013</a></td><td>15 Nov., 22:00 UTC &mdash; 16 Nov. 2013, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/107">GreHack CTF 2013</a></td><td>15 Nov., 09:00 UTC &mdash; 15 Nov. 2013, 18:00 UTC</td><td>Jeopardy</td><td>
+
+    Grenoble, France
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/102">CSAW CTF Final Round 2013</a></td><td>15 Nov., 02:00 UTC &mdash; 16 Nov. 2013, 14:00 UTC</td><td>Jeopardy</td><td>
+
+    New York, USA
+
+</td><td></td><td><tr><td><a href="/event/115">CSCAMP CTF Quals 2013</a></td><td>13 Nov., 20:00 UTC &mdash; 16 Nov. 2013, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/105">rwthCTF 2013</a></td><td>09 Nov., 12:00 UTC &mdash; 10 Nov. 2013, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/110">No cON Name CTF Finals 2013</a></td><td>01 Nov., 09:00 UTC &mdash; 01 Nov. 2013, 17:00 UTC</td><td>Jeopardy</td><td>
+
+    Barcelona, Spain
+
+</td><td></td><td><tr><td><a href="/event/87">MIT/LL CTF 2013</a></td><td>25 Oct., 23:00 UTC &mdash; 27 Oct. 2013, 23:00 UTC</td><td>Attack-Defense</td><td>
+
+    Boston, MA, USA
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/113">NotSoSecure CTF 2013</a></td><td>25 Oct., 15:00 UTC &mdash; 27 Oct. 2013, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/97">Hack.lu CTF 2013</a></td><td>22 Oct., 08:00 UTC &mdash; 24 Oct. 2013, 08:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/111">EMC Defenders League Quals 2013</a></td><td>04 Oct., 10:00 UTC &mdash; 25 Oct. 2013, 18:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/103">Sharif University CTF 2013</a></td><td>02 Oct., 10:30 UTC &mdash; 03 Oct. 2013, 10:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/109">No cON Name CTF Quals 2013</a></td><td>27 Sept., 22:00 UTC &mdash; 29 Sept. 2013, 15:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/96">CSAW CTF Qualification Round 2013</a></td><td>19 Sept., 22:00 UTC &mdash; 22 Sept. 2013, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/106">44CON CTF 2013</a></td><td>12 Sept., 09:00 UTC &mdash; 13 Sept. 2013, 15:00 UTC</td><td>Attack-Defense</td><td>
+
+    London, UK
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/92">ASIS CTF Finals 2013</a></td><td>29 Aug., 13:30 UTC &mdash; 31 Aug. 2013, 13:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/101">DEF CON CTF 2013</a></td><td>02 Aug., 17:00 UTC &mdash; 04 Aug. 2013, 20:00 UTC</td><td>Attack-Defense</td><td>
+
+    Las Vegas, NV, USA
+
+</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/73">EBCTF 2013</a></td><td>02 Aug., 10:00 UTC &mdash; 03 Aug. 2013, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/99">UFO CTF 2013</a></td><td>19 July, 14:00 UTC &mdash; 21 July 2013, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/100">DIMVA CTF 2013</a></td><td>17 July, 18:00 UTC &mdash; 19 July 2013, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/95">SIGINT CTF 2013</a></td><td>05 July, 16:00 UTC &mdash; 07 July 2013, 16:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/90">SECUINSIDE CTF Finals 2013</a></td><td>02 July, 13:00 UTC &mdash; 03 July 2013, 13:00 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td></td><td><tr><td><a href="/event/98">Nuit du Hack CTF Finals 2013</a></td><td>22 June, 21:00 UTC &mdash; 23 June 2013, 07:00 UTC</td><td>Attack-Defense</td><td>
+
+    Paris, France
+
+</td><td></td><td><tr><td><a href="/event/83">DEF CON CTF Qualifier 2013</a></td><td>15 June, 00:00 UTC &mdash; 17 June 2013, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/74">Boston Key Party CTF 2013</a></td><td>08 June, 22:00 UTC &mdash; 09 June 2013, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/85">EBCTF Teaser 2013</a></td><td>01 June, 12:00 UTC &mdash; 01 June 2013, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/93">BSIDES CTF 2013</a></td><td>31 May, 01:00 UTC &mdash; 31 May 2013, 05:00 UTC</td><td>Jeopardy</td><td>
+
+    Québec City, Canada
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/94">Facebook Security Hacker Competition at Source Dublin</a></td><td>25 May, 10:00 UTC &mdash; 25 May 2013, 17:00 UTC</td><td>Attack-Defense</td><td>
+
+    Dublin, Ireland
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/89">SECUINSIDE CTF Quals 2013</a></td><td>24 May, 13:00 UTC &mdash; 26 May 2013, 13:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/71">PHD CTF Finals 2013</a></td><td>23 May, 06:00 UTC &mdash; 24 May 2013, 16:00 UTC</td><td>Attack-Defense</td><td>
+
+    Moscow, Russia
+
+</td><td></td><td><tr><td><a href="/event/91">h34dCTF 2013</a></td><td>23 May, 04:00 UTC &mdash; 23 May 2013, 10:00 UTC</td><td>Jeopardy</td><td>
+
+    Novosibirsk, Russia
+
+</td><td></td><td><tr><td><a href="/event/88">BaltCTF Quals 2013</a></td><td>10 May, 12:00 UTC &mdash; 12 May 2013, 12:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/75">VolgaCTF 2013 Quals</a></td><td>01 May, 18:00 UTC &mdash; 03 May 2013, 18:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/84">ASIS CTF Quals  2013</a></td><td>20 April, 05:30 UTC &mdash; 22 April 2013, 05:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/69">RuCTF Finals 2013</a></td><td>20 April, 05:00 UTC &mdash; 21 April 2013, 10:00 UTC</td><td>Attack-Defense</td><td>
+
+    Yekaterinburg, Russia
+
+</td><td></td><td><tr><td><a href="/event/64">PlaidCTF 2013</a></td><td>19 April, 21:00 UTC &mdash; 21 April 2013, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/66">InnoGames CTF 2013</a></td><td>19 April, 06:00 UTC &mdash; 20 April 2013, 01:00 UTC</td><td>Attack-Defense</td><td>
+
+    Hamburg, Germany
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/54">HITB CTF Amsterdam 2013</a></td><td>08 April, 10:00 UTC &mdash; 11 April 2013, 12:00 UTC</td><td>Jeopardy</td><td>
+
+    Amsterdam, Netherlands
+
+</td><td></td><td><tr><td><a href="/event/46">NorthSec CTF 2013</a></td><td>05 April, 23:00 UTC &mdash; 07 April 2013, 20:00 UTC</td><td>Hack quest</td><td>
+
+    Montreal, Quebec, Canada
+
+</td><td></td><td><tr><td><a href="/event/63">Codegate CTF Finals 2013</a></td><td>03 April, 01:00 UTC &mdash; 04 April 2013, 01:00 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td></td><td><tr><td><a href="/event/76">easterpwn 2013</a></td><td>30 March, 20:00 UTC &mdash; 31 March 2013, 01:00 UTC</td><td>Attack-Defense</td><td>
+
+    Paderborn, Germany
+
+</td><td></td><td><tr><td><a href="/event/65">UCSB iCTF 2012</a></td><td>22 March, 15:00 UTC &mdash; 22 March 2013, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/86">Insomni&#39;hack 2013</a></td><td>22 March, 06:00 UTC &mdash; 23 March 2013, 02:00 UTC</td><td>Jeopardy</td><td>
+
+    Geneva, Switzerland
+
+</td><td></td><td><tr><td><a href="/event/68">ForbiddenBITS CTF 2013</a></td><td>15 March, 13:00 UTC &mdash; 16 March 2013, 13:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/72">backdoorCTF 2013</a></td><td>09 March, 15:30 UTC &mdash; 11 March 2013, 15:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/70">Nuit du Hack CTF Quals 2013</a></td><td>08 March, 23:00 UTC &mdash; 09 March 2013, 23:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/60">RuCTF Quals 2013</a></td><td>08 March, 14:00 UTC &mdash; 10 March 2013, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/62">Codegate CTF Preliminary 2013</a></td><td>01 March, 12:00 UTC &mdash; 03 March 2013, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/67">Nullcon &quot;Battle Underground&quot;</a></td><td>01 March, 04:30 UTC &mdash; 02 March 2013, 11:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/59">Ghost in the Shellcode 2013</a></td><td>15 Feb., 20:30 UTC &mdash; 17 Feb. 2013, 18:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/61">HackIM 2013</a></td><td>24 Jan., 23:59 UTC &mdash; 26 Jan. 2013, 23:59 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/51">ATAST CTF 2012</a></td><td>29 Dec., 08:00 UTC &mdash; 30 Dec. 2012, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/57">29c3 CTF</a></td><td>27 Dec., 13:37 UTC &mdash; 29 Dec. 2012, 23:42 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/56">PHD CTF Quals 2012</a></td><td>15 Dec., 06:00 UTC &mdash; 17 Dec. 2012, 06:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/48">rwthCTF 2012</a></td><td>30 Nov., 13:00 UTC &mdash; 01 Dec. 2012, 01:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/49">RuCTFE 2012</a></td><td>24 Nov., 15:00 UTC &mdash; 25 Nov. 2012, 01:30 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/50">PoliCTF 2012</a></td><td>17 Nov., 19:00 UTC &mdash; 18 Nov. 2012, 19:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/43">CSAW CTF Final Round 2012</a></td><td>15 Nov., 18:00 UTC &mdash; 17 Nov. 2012, 18:00 UTC</td><td>Jeopardy</td><td>
+
+    NY, USA
+
+</td><td></td><td><tr><td><a href="/event/53">CSCAMP CTF Quals 2012</a></td><td>09 Nov., 06:00 UTC &mdash; 11 Nov. 2012, 06:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/55">Power of XX 2012</a></td><td>08 Nov., 01:00 UTC &mdash; 08 Nov. 2012, 09:00 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/44">Hackfest 2012</a></td><td>02 Nov., 23:00 UTC &mdash; 03 Nov. 2012, 07:00 UTC</td><td>Attack-Defense</td><td>
+
+    Quebec, Canada
+
+</td><td></td><td><tr><td><a href="/event/38">Hack.lu CTF 2012</a></td><td>23 Oct., 07:00 UTC &mdash; 25 Oct. 2012, 07:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/47">Ruxcon CTF 2012</a></td><td>20 Oct., 09:00 UTC &mdash; 20 Oct. 2012, 15:00 UTC</td><td>Attack-Defense</td><td>
+
+    Melbourne, Australia
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/52">GreHack CTF 2012</a></td><td>19 Oct., 16:00 UTC &mdash; 20 Oct. 2012, 02:00 UTC</td><td>Jeopardy</td><td>
+
+    Grenoble, France
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/39">HitbSecConf CTF (Kuala Lumpur) 2012</a></td><td>08 Oct., 05:00 UTC &mdash; 11 Oct. 2012, 14:00 UTC</td><td>Attack-Defense</td><td>
+
+    Kuala Lumpur, Malaysia
+
+</td><td></td><td><tr><td><a href="/event/42">CSAW CTF Qualification Round 2012</a></td><td>28 Sept., 14:00 UTC &mdash; 30 Sept. 2012, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/40">DerbyCon 2012</a></td><td>27 Sept., 09:00 UTC &mdash; 28 Sept. 2012, 09:00 UTC</td><td>Hack quest</td><td>
+
+    Louisville, KY, USA
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/41">BaltCTF 2012</a></td><td>26 Aug., 06:00 UTC &mdash; 26 Aug. 2012, 14:00 UTC</td><td>Hack quest</td><td>
+
+    Kaliningrad, Russia
+
+</td><td></td><td><tr><td><a href="/event/33">InCTF 2012</a></td><td>17 Aug., 06:00 UTC &mdash; 19 Aug. 2012, 14:00 UTC</td><td>Jeopardy</td><td>
+
+    India, Kerala
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/26">DEF CON CTF 2012</a></td><td>27 July, 06:00 UTC &mdash; 29 July 2012, 10:00 UTC</td><td>Attack-Defense</td><td>
+
+    Las Vegas, NV, USA
+
+</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/35">SECUINSIDE CTF Finals 2012</a></td><td>10 July, 06:00 UTC &mdash; 11 July 2012, 06:00 UTC</td><td>Jeopardy</td><td>
+
+    Seul, Republic of Korea
+
+</td><td></td><td><tr><td><a href="/event/34">Nuit du Hack CTF Finals 2012</a></td><td>23 June, 06:00 UTC &mdash; 24 June 2012, 15:00 UTC</td><td>Attack-Defense</td><td>
+
+    France, Paris
+
+</td><td></td><td><tr><td><a href="/event/25">SECUINSIDE CTF Quals 2012</a></td><td>09 June, 02:00 UTC &mdash; 11 June 2012, 02:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/2">DEF CON CTF Qualifier 2012</a></td><td>02 June, 00:00 UTC &mdash; 04 June 2012, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/11">PHD CTF Finals 2012</a></td><td>30 May, 12:00 UTC &mdash; 31 May 2012, 18:00 UTC</td><td>Attack-Defense</td><td>
+
+    Moscow, Russia
+
+</td><td></td><td><tr><td><a href="/event/14">HITB CTF Amsterdam 2012</a></td><td>24 May, 10:00 UTC &mdash; 25 May 2012, 17:00 UTC</td><td>Attack-Defense</td><td>
+
+    Amsterdam, Netherlands
+
+</td><td></td><td><tr><td><a href="/event/21">BaltCTF Quals 2012</a></td><td>18 May, 20:00 UTC &mdash; 20 May 2012, 19:59 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/8">PlaidCTF 2012</a></td><td>27 April, 21:00 UTC &mdash; 28 April 2012, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/16">RuCTF Finals 2012</a></td><td>21 April, 09:00 UTC &mdash; 21 April 2012, 20:00 UTC</td><td>Attack-Defense</td><td>
+
+    Yekaterinburg, Russia
+
+</td><td></td><td><tr><td><a href="/event/18">Codegate CTF Finals 2012</a></td><td>02 April, 01:00 UTC &mdash; 03 April 2012, 01:00 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td></td><td><tr><td><a href="/event/6">Nuit du Hack CTF Quals 2012</a></td><td>24 March, 23:16 UTC &mdash; 25 March 2012, 23:16 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/17">RuCTF Quals 2012</a></td><td>16 March, 21:00 UTC &mdash; 18 March 2012, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/9">Codegate CTF Preliminary 2012</a></td><td>24 Feb., 12:00 UTC &mdash; 26 Feb. 2012, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/10">ForbiddenBITS CTF 2012</a></td><td>11 Feb., 09:00 UTC &mdash; 13 Feb. 2012, 22:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/7">Mozilla CTF 2012</a></td><td>25 Jan., 21:00 UTC &mdash; 26 Jan. 2012, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/27">Ghost in the Shellcode 2012</a></td><td>06 Jan., 14:00 UTC &mdash; 07 Jan. 2012, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/19">PHD CTF Quals 2011</a></td><td>10 Dec., 10:00 UTC &mdash; 11 Dec. 2011, 10:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/22">UCSB iCTF 2011</a></td><td>02 Dec., 04:00 UTC &mdash; 03 Dec. 2011, 01:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/15">RuCTFE 2011</a></td><td>19 Nov., 15:00 UTC &mdash; 20 Nov. 2011, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/45">CSAW CTF Final Round 2011</a></td><td>10 Nov., 08:00 UTC &mdash; 11 Nov. 2011, 08:00 UTC</td><td>Attack-Defense</td><td></td><td></td><td><tr><td><a href="/event/58">Power of XX 2011</a></td><td>03 Nov., 01:00 UTC &mdash; 03 Nov. 2011, 11:00 UTC</td><td>Jeopardy</td><td>
+
+    On-site, Seoul, Korea
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/29">EnoWars 2011</a></td><td>07 Oct., 06:00 UTC &mdash; 07 Oct. 2011, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/3">rwthCTF 2011</a></td><td>30 Sept., 17:00 UTC &mdash; 01 Oct. 2011, 04:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/4">CSAW CTF Qualification Round 2011</a></td><td>23 Sept., 20:00 UTC &mdash; 25 Sept. 2011, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/13">Hack.lu CTF 2011</a></td><td>19 Sept., 09:00 UTC &mdash; 21 Sept. 2011, 09:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/37">SibCTF Finals 2011</a></td><td>11 Sept., 06:00 UTC &mdash; 12 Sept. 2011, 14:00 UTC</td><td>Jeopardy</td><td>
+
+    Tomsk, Russia
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/23">DEF CON CTF 2011</a></td><td>04 Aug., 06:00 UTC &mdash; 07 Aug. 2011, 14:00 UTC</td><td>Attack-Defense</td><td>
+
+    Las Vegas, NV, USA
+
+</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/36">SibCTF Quals 2011</a></td><td>30 June, 20:00 UTC &mdash; 02 July 2011, 20:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/1">DEF CON CTF Qualifier 2011</a></td><td>03 June, 19:00 UTC &mdash; 04 June 2011, 01:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/28">dCTF 2011</a></td><td>28 May, 04:30 UTC &mdash; 28 May 2011, 12:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/24">PHD CTF Finals 2011</a></td><td>19 May, 15:00 UTC &mdash; 20 May 2011, 15:00 UTC</td><td>Attack-Defense</td><td>
+
+    Moscow, Russia
+
+</td><td></td><td><tr><td><a href="/event/12">PlaidCTF 2011</a></td><td>22 April, 00:00 UTC &mdash; 24 April 2011, 00:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/5">Nuit du Hack CTF Quals 2011</a></td><td>03 April, 21:13 UTC &mdash; 03 April 2011, 21:13 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/20">Codegate CTF Finals 2011</a></td><td>01 April, 17:32 UTC &mdash; 02 April 2011, 17:32 UTC</td><td>Jeopardy</td><td>
+
+    Seoul, Republic of Korea
+
+</td><td></td><td><tr><td><a href="/event/124">RuCTFE 2010</a></td><td>18 Dec., 16:00 UTC &mdash; 19 Dec. 2010, 04:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/77">UCSB iCTF 2010</a></td><td>01 Dec., 00:00 UTC &mdash; 02 Dec. 2010, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/377">RuCTF Finals 2010</a></td><td>26 April, 04:00 UTC &mdash; 26 April 2010, 14:00 UTC</td><td>Attack-Defense</td><td>
+
+    Yekaterinburg, Russia
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/78">UCSB iCTF 2009</a></td><td>01 Dec., 00:00 UTC &mdash; 02 Dec. 2009, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/378">RuCTF Finals 2009</a></td><td>26 April, 04:00 UTC &mdash; 26 April 2009, 13:00 UTC</td><td>Attack-Defense</td><td>
+
+    Yekaterinburg, Russia
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/79">UCSB iCTF 2008</a></td><td>01 Dec., 00:00 UTC &mdash; 01 Dec. 2008, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/379">RuCTF Finals 2008</a></td><td>27 April, 06:00 UTC &mdash; 27 April 2008, 14:00 UTC</td><td>Attack-Defense</td><td>
+
+    Yekaterinburg, Russia
+
+</td><td></td><td><a href="/event/mail">missing the scoreboard</a><tr><td><a href="/event/80">UCSB iCTF 2007</a></td><td>01 Dec., 00:00 UTC &mdash; 02 Dec. 2007, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/81">UCSB iCTF 2006</a></td><td>01 Dec., 00:00 UTC &mdash; 01 Dec. 2006, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td><tr><td><a href="/event/82">UCSB iCTF 2005</a></td><td>01 Dec., 00:00 UTC &mdash; 02 Dec. 2005, 00:00 UTC</td><td>Attack-Defense</td><td>
+On-line
+</td><td></td><td></td></tr></table>
+
+
+  <div class="row">
+    <div class="span4">
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+    </div><!-- /container -->
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+    <div class="container">
+      <p class="pull-right"><a href="//twitter.com/CTFtime" class="twitter-follow-button" data-show-count="false">Follow @CTFtime</a>        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+      <p>All tasks and writeups are copyrighted by their respective authors.<br/>
+    Original CTFtime logo by <a href=http://botanick.net/>Botanick</a>, network & hosting provided by <a href="http://www.transdata.no/">Transdata</a>.</p>
+    </div>
+    </footer>
+
+
+    <div class="modal hide fade" id="loginModal">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal">x</button>
+        <h3>Logon via</h3>
+    </div>
+    <div class="modal-body" align="center">
+        <a href="/login/google-oauth2/"><img src="/static/images/google_32.png" alt="Enter using Google" /></a>
+        <a href="/login/twitter/"><img src="/static/images/twitter_32.png" alt="Enter using Twitter" /></a>
+        <a href="/login/facebook/"><img src="/static/images/facebook_32.png" alt="Enter using Facebook" /></a>
+        <a href="/login/github/"><img src="/static/images/github_32.png" alt="Enter using Github" /></a>
+    </div>
+    </div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-dropdown.js"></script>
+<!--    <script src="/static/bootstrap/js/bootstrap-scrollspy.js"></script>-->
+    <script src="/static/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-button.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-collapse.js"></script>
+<!--    <script src="/static/bootstrap/js/bootstrap-carousel.js"></script>-->
+    <script src="/static/js/typeahead.js"></script>
+
+    <script type="text/javascript">
+        $('.dropdown-toggle').dropdown();
+    </script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter14236711 = new Ya.Metrika({id:14236711, enableAll: true, webvisor:true});
+        } catch(e) {}
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/14236711" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-559211-27']);
+  _gaq.push(['_setDomainName', 'ctftime.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>

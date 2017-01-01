@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <title>Glicko-2 CTF Experiments</title>
+
+        <style type="text/css">
+            h4 { font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="starter-template">
+                <h1>Glicko-2 CTF Experiments</h1>
+                <h4>by <a href="https://twitter.com/_niklasb">niklasb</a>,
+                    find source code and docs on <a href="https://github.com/niklasb/ctf-glicko2">Github</a></h4>
+
+                <form style="margin-top:50px;" target="rating" action="graph" method="get">
+                    <div style="width: 600px;">
+                        <h4>How to select CTF and scoreboard</h4>
+                        <div class="row">
+                            <div class="col-xs-9">Minimum CTF weight to consider</div>
+                            <div class="col-xs-3">
+                                <input class="form-control" type="text" name="min_contest_weight" value="10"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-9">How many top places to consider per CTF</div>
+                            <div class="col-xs-3">
+                                <input class="form-control" type="text" name="max_top" value="20"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-9">Minimum points as percentage of winning team</div>
+                            <div class="col-xs-3">
+                                <input class="form-control" type="text" name="score_percentile" value="0"/>
+                            </div>
+                        </div>
+                        <h4>Tweaking</h4>
+                        <div class="row">
+                            <div class="col-xs-9">Damping factor for negative rating deltas</div>
+                            <div class="col-xs-3">
+                                <input class="form-control" type="text" name="negative_damping" value="0.7"/>
+                            </div>
+                        </div>
+                        <h4>Glicko-2 Parameters</h4>
+                        <div class="row">
+                            <div class="col-xs-9">Initial rating</div>
+                            <div class="col-xs-3">
+                                <input class="form-control" disabled="disabled"
+                                       type="text" name="initrat" value="1500"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-9">Initial confidence (RD)</div>
+                            <div class="col-xs-3">
+                                <input class="form-control" type="text" name="initrd" value="100"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-9">Initial volatility (σ)</div>
+                            <div class="col-xs-3">
+                                <input class="form-control" type="text" name="initvol" value="0.1"/>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-default" value="Create custom rating" />
+                </form>
+
+                <iframe style="border: 0; min-width: 1200px; height: 900px;" name="rating" src="graph?max_top=20&min_contest_weight=10&score_percentile=0&initrd=100&initvol=0.1&negative_damping=0.7">
+                </iframe>
+            </div>
+        </div>
+    </body>
+</html>

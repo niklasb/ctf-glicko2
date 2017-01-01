@@ -1,0 +1,71 @@
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 800px; height: 800px; margin: 0 auto"></div>
+
+<script>
+function formatDiff(diff) {
+    return (diff>0) ? '+'+Math.round(diff) : '-'+Math.round(-diff);
+}
+
+$(function () {
+    Highcharts.chart('container', {
+        title: {
+            text: 'Glicko2 Rating of CTF Teams 2016',
+            align: 'left',
+            x: 100
+        },
+        chart: {
+            zoomType: 'x',
+            width: 1400,
+            heigh: 800
+        },
+        subtitle: {
+            text: 'Top {{TOP}} from each CTF with weight at least {{MIN_CONTEST_WEIGHT}}<br />'
+                + 'Only teams with at least {{SCORE_PERCENTILE}}% of winner points<br />'
+                + 'Initial (r, RD, σ) = ({{DEFAULT_RATING}}, {{DEFAULT_CONF}}, {{DEFAULT_VOL}})<br />'
+                + 'Damping for neg. deltas = {{NEGATIVE_DAMPING}}',
+            align: 'left',
+            x: 100
+        },
+        xAxis: {
+            categories: {{XAXIS}}
+        },
+        yAxis: {
+            title: {
+                text: 'Rating'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }],
+        },
+        tooltip: {
+            headerFormat: '',
+            pointFormatter: function() {
+                var res = '';
+                res += this.series.name + ' @ <b>' + this.category + '</b><br/>';
+                res += 'Place: <b>' + this.place + '</b>, Contest weight: '
+                        + this.contest_weight + '<br />';
+                res += 'Rating: <b>' + Math.round(this.y) + '</b> (<b>'
+                           + formatDiff(this.diff) + '</b>)<br />';
+                res += 'RD: ' + Math.round(this.rd)
+                    + ' σ: ' + Math.round(100*this.vol)/100 + '<br />';
+                return res;
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: {{DATA}}
+    });
+});
+</script>
